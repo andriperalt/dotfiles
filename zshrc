@@ -8,13 +8,6 @@ ZSH_THEME="promptline"
 
 HISTFILE="${ZDOTDIR}/history"
 
-# oh-my-zsh libs
-for config_file ($ZDOTDIR/oh-my-zsh/lib/*.zsh)
-do
-  source $config_file
-done
-unset config_file
-
 autoload -U compaudit compinit
 
 autoload bashcompinit
@@ -24,7 +17,7 @@ bashcompinit
 [[ -z $ZSH_COMPDUMP ]] && ZSH_COMPDUMP="${ZDOTDIR}/completion.${SHORT_HOST}.${ZSH_VERSION}.dump"
 compinit -i -d $ZSH_COMPDUMP
 
-# My zsh libs
+# zsh libs
 for config_file ($ZDOTDIR/lib/*.zsh)
 do
   source $config_file

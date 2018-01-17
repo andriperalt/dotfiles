@@ -1,9 +1,6 @@
 [submodule "vim/bundle/vim-airline"]
 	path = vim/pack/ages/start/vim-airline
 	url = https://github.com/bling/vim-airline.git
-[submodule "oh-my-zsh"]
-	path = zsh/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "vim/bundle/badwolf"]
 	path = vim/pack/colorschemes/start/badwolf
 	url = https://github.com/sjl/badwolf.git
