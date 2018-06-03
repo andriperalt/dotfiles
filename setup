@@ -6,7 +6,7 @@ printf "${DOTFILES_ROOT} - starting installation\n"
 
 printf "${DOTFILES_ROOT} - binding dotfiles\n"
 
-DOTFILES=(fonts asdf fzf)
+DOTFILES=(fonts asdf fzf Xmodmap)
 
 if command -v zsh > /dev/null
 then
@@ -36,7 +36,7 @@ done
 
 printf "${DOTFILES_ROOT} - synchronizing submodules\n"
 
-(cd "${DOTFILES_ROOT}" && git submodule update --quiet --init --recursive --depth 1)
+(cd "${DOTFILES_ROOT}" && git submodule update --quiet --init --depth 1)
 
 printf "${DOTFILES_ROOT} - "
 $DOTFILES_ROOT/fzf/install --bin
