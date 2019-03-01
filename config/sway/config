@@ -24,16 +24,13 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term gnome-terminal
+set $term kitty
 # Your preferred application launcher
-set $menu rofi -show run
+set $menu rofi -show combi
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/Pictures/wallpaper fill
-# output DP-2 resolution 1920x1080 position 0,1080
-# output HDMI-A-1 resolution 1920x1080 position 0,0
 #
 # Example configuration:
 #
@@ -210,11 +207,14 @@ bar {
 }
 
 include /etc/sway/config.d/*
+
+# Appearance
 gaps inner 10
 
 default_border none
 
-input "9494:4:CM_Storm_QuickFire_Rapid_keyboard" {
-  xkb_options caps:escape
-  xkb_options compose:ralt
+input * {
+  xkb_options caps:escape,compose:ralt
 }
+
+include ~/.config/sway/local/*

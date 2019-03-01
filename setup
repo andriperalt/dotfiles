@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e
 
 color_white='\033[1;37m'
 color_green='\033[1;32m'
@@ -75,6 +74,11 @@ fi
 if command -v rofi > /dev/null
 then
   XDG_DOTFILES+=(rofi)
+fi
+
+if command -v kitty > /dev/null
+then
+  XDG_DOTFILES+=(kitty)
 fi
 
 for dotfile in "${XDG_DOTFILES[@]}"
