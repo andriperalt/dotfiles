@@ -60,7 +60,7 @@ set $menu rofi -show combi
     bindsym $mod+Return exec $term
 
     # kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # start your launcher
     bindsym $mod+d exec $menu
@@ -209,6 +209,8 @@ bar {
 include /etc/sway/config.d/*
 
 # Appearance
+font Cantarell 10
+
 gaps inner 10
 
 default_border none
