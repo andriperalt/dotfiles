@@ -34,6 +34,9 @@ for dotfile in "${DOTFILES[@]}"
 do
   printf "${color_white}${dotfile}${color_end}\n"
 
+  # modules
+  if [[ $* != *--no-modules* ]]
+  then
   for module in $modules
   do
     if [[ $module = *"${dotfile}"* ]]
@@ -43,6 +46,7 @@ do
       printf "  - ${color_green}Download complete${color_end}\n"
     fi
   done
+  fi
 
   link_path="${HOME}/.${dotfile}"
   dotfile_path="${PWD}/${dotfile}"
@@ -79,6 +83,11 @@ fi
 if command -v kitty > /dev/null
 then
   XDG_DOTFILES+=(kitty)
+fi
+
+if command -v i3blocks > /dev/null
+then
+  XDG_DOTFILES+=(i3blocks)
 fi
 
 for dotfile in "${XDG_DOTFILES[@]}"

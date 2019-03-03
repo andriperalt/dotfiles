@@ -195,7 +195,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    status_command i3status
+    status_command i3blocks
     position top
     colors {
         statusline #ffffff
@@ -215,7 +215,11 @@ gaps inner 10
 
 default_border none
 
+bindsym $mod+p exec grim -t png ~/Pictures/screenshot.png
+
 input * {
+  tap enabled
+  natural_scroll disabled
   xkb_options caps:escape,compose:ralt
 }
 

@@ -1,0 +1,20 @@
+[empty]
+full_text= 
+
+[load average]
+command=cat /proc/loadavg | awk '{print $1, $2, $3}'
+interval=60
+min_width=100
+align=center
+
+[battery]
+command=./battery
+interval=60
+min_width=50
+align=center
+
+[time]
+command=date "+%F %T"
+interval=1
+min_width=150
+align=center
