@@ -1,26 +1,24 @@
 ### Variables
-
-# Gruvbox-Dark Pallete
 set $no_color #00000000
 set $black_color #000000
-set $red_color #cc241d
-set $red2_color #fb4934
-set $green_color #98971a
-set $green2_color #d8bb26
-set $yellow_color #d79921
-set $yellow2_color #fabd2f
-set $blue_color #458588
-set $blue2_color #83a598
-set $purple_color #b16286
-set $purple2_color #d3869b
-set $aqua_color #689d6a
-set $aqua2_color #8ec07c
-set $gray_color #a89984
-set $gray2_color #928374
+set $red_color #bf616a
+set $red2_color #bf616a
+set $green_color #a3be8c
+set $green2_color #a3be8c
+set $yellow_color #ebcb8b
+set $yellow2_color #ebcb8b
+set $blue_color #81a1c1
+set $blue2_color #81a1c1
+set $purple_color #b48ead
+set $purple2_color #b48ead
+set $aqua_color #88C0D0
+set $aqua2_color #8fbcbb
+set $gray_color #e5e9f0
+set $gray2_color #4c566a
 set $orange_color #d65d0e
 set $orange2_color #928374
 
-set $bg0_color #282828
+set $bg0_color #3b4252
 set $bg1_color #3c3836
 set $bg2_color #504945
 set $bg3_color #665c54
@@ -28,10 +26,10 @@ set $bg4_color #7c6f64
 set $bg0_h_color #1d2021
 
 set $bg_color $bg0_color
-set $fg_color #ebdbb2
+set $fg_color #eceff4
 
 # Default fonts
-set $mono_font "Fira Code"
+set $mono_font "DejaVu Sans Mono"
 set $sans_font "Cantarell"
 
 # Logo key. Use Mod1 for Alt.
@@ -45,7 +43,6 @@ set $right l
 
 # Sizing
 set $gap_size 8
-set $border_size 3
 set $font_size 11
 
 # Terminal emulator
@@ -212,13 +209,15 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bindsym $mod+alt+8 resize set width 761px
+
 include /etc/sway/config.d/*
 
 font $mono_font $font_size
 
 gaps inner $gap_size
 
-default_border pixel $border_size
+default_border pixel 2
 
 client.focused $blue_color $blue_color $bg_color $blue_color $blue_color
 client.focused_inactive $bg_color $bg_color $blue_color $bg_color $bg_color
@@ -248,18 +247,22 @@ input * {
 bindswitch lid:on output eDP-1 disable
 bindswitch lid:off output eDP-1 enable
 
-# lock screen after a period of inactivity
-exec swayidle -w \
-    timeout 300 'swaymsg "output * dpms off"' \
-      resume 'swaymsg "output * dpms on"' \
-    timeout 330 swaylock \
-      resume 'swaymsg "output * dpms on"' \
-    before-sleep swaylock \
-    after-resume 'sway output * enable' \
-    lock swaylock 
+output * background ~/Pictures/wallpaper fill
+
+# # lock screen after a period of inactivity
+# exec swayidle -w \
+#     timeout 300 'swaymsg "output * dpms off"' \
+#       resume 'swaymsg "output * dpms on"' \
+#     timeout 330 swaylock \
+#       resume 'swaymsg "output * dpms on"' \
+#     before-sleep swaylock \
+#     after-resume 'sway output * enable' \
+#     lock swaylock 
 
 # notification service
 exec mako
+
+exec sway-session restore && sway-session save-loop
 
 # include local configurations (not versioned at dotfiles)
 include ~/.config/sway/local/*

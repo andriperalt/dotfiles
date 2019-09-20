@@ -12,7 +12,7 @@ mkdir -p $XDG_CACHE_HOME/zsh
 ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 HISTFILE="${XDG_DATA_HOME}/zsh/history"
 ZSH_COMPDUMP="${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERSION}"
-ZSH_THEME="gruvbox"
+ZSH_THEME="simple"
 
 EDITOR=nvim
 VISUAL=$EDITOR

@@ -5,45 +5,37 @@ foreground        = #ebdbb2
 foreground_bold   = #ebdbb2
 cursor            = #ebdbb2
 cursor_foreground = #1d2021
-background        = rgba(0, 0, 0, 0.7)
+background        = rgba(0, 0, 0, 0.8)
 
 # Black
-color0  = #282828
+color0  = #3b4252
 # DarkRed
-color1  = #cc241d
+color1  = #bf616a
 # DarkGreen
-color2  = #98971a
+color2  = #a3be8c
 # DarkYellow
-color3  = #d79921
+color3  = #ebcb8b
 # DarkBlue
-color4  = #458588
+color4  = #81a1c1
 # DarkMagenta
-color5  = #b16286
+color5  = #b48ead
 # DarkCyan
-color6  = #689d6a
+color6  = #88C0D0
 # LightGrey
-color7  = #a89984
+color7  = #e5e9f0
 # Dark Gray
-color8  = #928374
+color8  = #4c566a
 # Red
-color9  = #fb4934
+color9  = #bf616a
 # Green
-color10 = #b8bb26
+color10 = #a3be8c
 # Yellow 
-color11 = #fabd2f
+color11 = #ebcb8b
 # Blue
-color12 = #83a598
+color12 = #81a1c1
 # Magenta
-color13 = #d3869b
+color13 = #b48ead
 # Cyan
-color14 = #8ec07c
+color14 = #8fbcbb
 # White
-color15 = #ebdbb2
-
-# Extra colors
-color16 = #fe8019
-color17 = #d65d0e
-color18 = #3c3836
-color19 = #504945
-color20 = #bdae93
-color21 = #ebdbb2
+color15 = #eceff4

@@ -31,3 +31,6 @@
 [submodule "nvim/pack/ages/start/vim-polyglot"]
 	path = nvim/pack/ages/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "nvim/pack/ages/start/nord-vim"]
+	path = nvim/pack/ages/start/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim.git
